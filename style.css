@@ -1,0 +1,86 @@
+/* Контейнер для сетки карточек */
+div:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Сама карточка */
+.user-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Имя пользователя */
+.user-name {
+    margin: 0 0 4px 0;
+    font-size: 1.25rem;
+    color: #1a202c;
+    font-weight: 600;
+}
+
+/* Никнейм (@Bret) */
+.user-username {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 8px;
+}
+
+/* Ссылка на email */
+.user-email {
+    font-size: 0.9rem;
+    color: #3182ce;
+    text-decoration: none;
+    margin-bottom: 16px;
+    word-break: break-all;
+}
+
+.user-email:hover {
+    text-decoration: underline;
+}
+
+/* Блок с адресом */
+.user-address {
+    border-top: 1px solid #edf2f7;
+    padding-top: 12px;
+    margin-bottom: 12px;
+}
+
+.user-address h4 {
+    margin: 0 0 6px 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #a0aec0;
+    letter-spacing: 0.05em;
+}
+
+.user-address p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+/* Блок с координатами */
+.user-geo {
+    margin-top: auto; /* Прижимает координаты к самому низу карточки */
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    background: #f8fafc;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
